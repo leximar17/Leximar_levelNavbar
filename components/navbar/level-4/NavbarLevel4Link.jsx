@@ -3,7 +3,9 @@ import React from "react";
 import { classNames } from "../../../lib/helper";
 
 export default function NavbarLevel4Link({ currentPath, href, title }) {
+  
   return (
+    
     <Link href={href}>
       <a
         className={classNames(
@@ -15,7 +17,9 @@ export default function NavbarLevel4Link({ currentPath, href, title }) {
       >
         {title === "Dashboard" && title}
         {title === "Team" && title}
-        {title != "Dashboard" && title != "Team" && "Revisa tu código"}
+        {title === "Projects" && title}
+        {title === "Calendar" && title}
+        {title != "Dashboard" && title != "Team"  && title != "Calendar" && title != "Projects" &&  "Revisa tu código"}
       </a>
     </Link>
   );

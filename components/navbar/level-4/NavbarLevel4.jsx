@@ -10,6 +10,8 @@ import NavbarLevel4Link from "./NavbarLevel4Link";
 const navegation = [
   { id: 1, href: "/", title: "Dashboard" },
   { id: 2, href: "/team", title: "Team" },
+  { id: 3, href: "/projects", title: "Projects" },
+  { id: 4, href: "/calendar", title: "Calendar" },
 ];
 
 export default function NavbarLevel4() {
@@ -24,7 +26,7 @@ export default function NavbarLevel4() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 justify-between">
               <div className="flex">
-                <NavbarLogo />
+                <NavbarLogo href={"/"} />
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                   {navegation.map((nav) => (
                     <NavbarLevel4Link
@@ -35,7 +37,7 @@ export default function NavbarLevel4() {
                     />
                   ))}
 
-                  <Link href="/projects">
+                  {/* <Link href="/projects">
                     <a
                       className={
                         "/projects" === currentPath
@@ -56,7 +58,7 @@ export default function NavbarLevel4() {
                     >
                       Calendar
                     </a>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
 

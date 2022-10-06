@@ -1,4 +1,4 @@
- import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import NavbarLogo from "../../commons/NavbarLogo";
 import Link from "next/link";
@@ -7,9 +7,8 @@ import { useRouter } from "next/router";
 export default function NavbarLevel0AsPath() {
   const router = useRouter();
 
-   let currentPath = router.asPath;
-
- 
+  let currentPath = router.asPath;
+  console.log(currentPath);
 
   return (
     <Disclosure as="nav" className="bg-white shadow mb-6">
@@ -36,26 +35,70 @@ export default function NavbarLevel0AsPath() {
                     </Link>
                   )}
 
-                  
-                  <p
+                  {"/team" === currentPath ? (
+                    <Link href="/team">
+                      <a className="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900">
+                        Team
+                      </a>
+                    </Link>
+                  ) : (
+                    <Link href="/team">
+                      <a className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
+                        Team
+                      </a>
+                    </Link>
+                  )}
+
+                  {"/projects" === currentPath ? (
+                    <Link href="/projects">
+                      <a className="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900">
+                      Projects
+                      </a>
+                    </Link>
+                  ) : (
+                    <Link href="/projects">
+                      <a className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
+                      Projects
+                      </a>
+                    </Link>
+                  )}
+
+                  {"/calendar" === currentPath ? (
+                    <Link href="/calendar">
+                      <a className="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900">
+                        Calendar
+                      </a>
+                    </Link>
+                  ) : (
+                    <Link href="/calendar">
+                      <a className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
+                        Calendar
+                      </a>
+                    </Link>
+                  )}
+
+                  {/* <p
                     href="/teams"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
                     Teams
-                  </p>
+                  </p> */}
 
-                  <p
+                  {/* <p
                     href="/projects"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
                     Projects
-                  </p>
-                  <p
+                  </p> */}
+
+                  {/* <p
                     href="/calendar"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
                     Calendar
-                  </p>
+                  </p> */}
+
+
                 </div>
               </div>
 

@@ -9,8 +9,6 @@ export default function NavbarLevel1() {
 
    let currentPath = router.asPath;
 
- 
-
   return (
     <Disclosure as="nav" className="bg-white shadow mb-6">
       {({ open }) => (
@@ -18,7 +16,7 @@ export default function NavbarLevel1() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 justify-between">
               <div className="flex">
-                <NavbarLogo />
+                <NavbarLogo />  
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                   <Link href="/">
                     <a
@@ -31,24 +29,58 @@ export default function NavbarLevel1() {
                       Dashboard
                     </a>
                   </Link>
-                  <p
+                  <Link href="/team">
+                    <a
+                    className={
+                      "/team" === currentPath
+                      ? "inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
+                      : "inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                    }
+                    >
+                      Team
+                    </a>
+                  </Link>
+                  <Link href="/projects">
+                    <a
+                    className={
+                      "/projects" === currentPath
+                      ? "inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
+                      : "inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                    }
+                    >
+                      Projects
+                    </a>
+                  </Link>
+                  <Link href="/calendar">
+                    <a
+                    className={
+                      "/calendar" === currentPath
+                      ? "inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
+                      : "inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                    }
+                    >
+                      Calendar
+                    </a>
+                  </Link>
+
+                  {/* <p
                     href="/team"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
                     Team
-                  </p>
-                  <p
+                  </p> */}
+                  {/* <p
                     href="/projects"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
                     Projects
-                  </p>
-                  <p
+                  </p> */}
+                  {/* <p
                     href="/calendar"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
                     Calendar
-                  </p>
+                  </p> */}
                 </div>
               </div>
 

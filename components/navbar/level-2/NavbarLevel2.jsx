@@ -35,11 +35,12 @@ export default function NavbarLevel2() {
                   </Link>
                   <Link href="/team">
                     <a
-                      className={
+                      className={classNames(
                         "/team" === currentPath
-                          ? "inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
-                          : "inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                      }
+                          ? "border-indigo-500 text-gray-900"
+                          : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700",
+                        "inline-flex items-center border-b-2 font-medium px-1 pt-1 text-sm "
+                      )}
                     >
                       Team
                     </a>
@@ -47,21 +48,26 @@ export default function NavbarLevel2() {
                   <Link href="/projects">
                     <a
                       className={
-                        "/projects" === currentPath
-                          ? "inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
-                          : "inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                      }
+                        classNames(
+                          "/projects" === currentPath
+                          ? "border-indigo-500 text-gray-900"
+                          : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700",
+                          "inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium"                      
+                        )}
                     >
                       Projects
                     </a>
                   </Link>
                   <Link href="/calendar">
                     <a
-                      className={
+                      className={                       
+                      classNames(
                         "/calendar" === currentPath
-                          ? "inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
-                          : "inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                      }
+                        ? "border-indigo-500 text-gray-900"
+                        : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700",
+                        "inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium"
+                    
+                      )}
                     >
                       Calendar
                     </a>

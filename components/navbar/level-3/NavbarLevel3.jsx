@@ -5,7 +5,10 @@ import NavbarLogo from "../../commons/NavbarLogo";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { classNames } from "../../../lib/helper";
-import NavbarLevel3Link from "./NavbarLevel3Link";
+import NavbarLevel3Dashboard from "./NavbarLevel3Dashboard";
+import NavbarLevel3Team from "./NavbarLevel3Team";
+import NavbarLevel3Projects from "./NavbarLevel3Projects";
+import NavbarLevel3Calendar from "./NavbarLevel3Calendar";
 
 export default function NavbarLevel3() {
   const router = useRouter();
@@ -23,9 +26,14 @@ export default function NavbarLevel3() {
                 <NavbarLogo />
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                   
-                  <NavbarLevel3Link href={"/"} currentPath={currentPath} />
+                  <NavbarLevel3Dashboard href={"/"} currentPath={currentPath} />
+                  <NavbarLevel3Team href={"/team"} currentPath= {currentPath} />
+                  <NavbarLevel3Projects href={"/projects"} currentPath= {currentPath} />
+                  <NavbarLevel3Calendar href={"/calendar"} currentPath= {currentPath} />
 
-                  <Link href="/team">
+
+
+                  {/* <Link href="/team">
                     <a
                       className={
                         "/team" === currentPath
@@ -35,7 +43,7 @@ export default function NavbarLevel3() {
                     >
                       Team
                     </a>
-                  </Link>
+                  </Link> 
                   <Link href="/projects">
                     <a
                       className={
@@ -57,7 +65,7 @@ export default function NavbarLevel3() {
                     >
                       Calendar
                     </a>
-                  </Link>
+                  </Link>*/}
                 </div>
               </div>
 

@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { classNames } from "../../../lib/helper";
 
-export default function NavbarLevel3Link({ currentPath, href }) {
+export default function NavbarLevel3Dashboard({ currentPath, href }) {
   return (
     <Link href={href}>
       <a
